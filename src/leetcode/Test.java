@@ -7,10 +7,16 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        FiftyEight fiftyEight = new FiftyEight();
+        SixtySix sixtySix = new SixtySix();
 
+        int[] nums = {9};
 
-        System.out.println(fiftyEight.lengthOfLastWord("Hello World        "));
+        nums = sixtySix.plusOne(nums);
+
+        for (int num : nums) {
+            System.out.println(num);
+        }
+
     }
 
 }

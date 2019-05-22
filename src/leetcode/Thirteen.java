@@ -1,13 +1,9 @@
 package leetcode;
 
 /**
- * 第十三题
  *
  * 罗马数字转整数
- * Category	Difficulty	Likes	Dislikes
- * algorithms	Easy (57.34%)	444	-
- * Tags
- * Companies
+ *
  * 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
  *
  * 字符          数值

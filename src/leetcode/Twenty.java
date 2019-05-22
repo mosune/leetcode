@@ -6,10 +6,7 @@ import java.util.List;
 /**
  *
  * 有效的括号
- * Category	Difficulty	Likes	Dislikes
- * algorithms	Easy (37.60%)	776	-
- * Tags
- * Companies
+ *
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
  *
  * 有效字符串需满足：
