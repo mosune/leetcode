@@ -7,16 +7,11 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        SixtySix sixtySix = new SixtySix();
+        SixtySeven sixtySeven = new SixtySeven();
 
-        int[] nums = {9};
+        String nums = sixtySeven.addBinary("1", "1");
 
-        nums = sixtySix.plusOne(nums);
-
-        for (int num : nums) {
-            System.out.println(num);
-        }
-
+        System.out.println(nums);
     }
 
 }
