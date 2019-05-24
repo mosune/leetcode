@@ -7,11 +7,9 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        SixtySeven sixtySeven = new SixtySeven();
+        SixtyNine sixtyNine = new SixtyNine();
 
-        String nums = sixtySeven.addBinary("1", "1");
-
-        System.out.println(nums);
+        System.out.println(sixtyNine.mySqrt(2));
     }
 
 }
