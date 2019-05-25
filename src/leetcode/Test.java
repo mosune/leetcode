@@ -7,9 +7,16 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        Seventy seventy = new Seventy();
+        EightyThree eightyThree = new EightyThree();
 
-        System.out.println(seventy.climbStairs(5));
+        ListNode listNode = new ListNode(1);
+        listNode.next = new ListNode(1);
+        listNode.next.next = new ListNode(2);
+        listNode.next.next.next = new ListNode(3);
+        listNode.next.next.next.next = new ListNode(3);
+
+        System.out.println(eightyThree.deleteDuplicates(listNode));
+        System.out.println(1);
     }
 
 }
