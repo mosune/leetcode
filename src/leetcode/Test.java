@@ -7,16 +7,12 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        EightyThree eightyThree = new EightyThree();
+        EightyEight eightyEight = new EightyEight();
 
-        ListNode listNode = new ListNode(1);
-        listNode.next = new ListNode(1);
-        listNode.next.next = new ListNode(2);
-        listNode.next.next.next = new ListNode(3);
-        listNode.next.next.next.next = new ListNode(3);
+        int[] nums1 = {1};
+        int[] nums2 = {};
 
-        System.out.println(eightyThree.deleteDuplicates(listNode));
-        System.out.println(1);
+        eightyEight.merge(nums1, 1, nums2, 0);
     }
 
 }
