@@ -7,9 +7,9 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        SixtyNine sixtyNine = new SixtyNine();
+        Seventy seventy = new Seventy();
 
-        System.out.println(sixtyNine.mySqrt(2));
+        System.out.println(seventy.climbStairs(5));
     }
 
 }
