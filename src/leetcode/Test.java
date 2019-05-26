@@ -7,12 +7,13 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        EightyEight eightyEight = new EightyEight();
+        OneHundred oneHundred = new OneHundred();
 
-        int[] nums1 = {1};
-        int[] nums2 = {};
+        TreeNode p = new TreeNode(1);
+        TreeNode q = new TreeNode(2);
 
-        eightyEight.merge(nums1, 1, nums2, 0);
+
+        System.out.println(oneHundred.isSameTree(p, q));
     }
 
 }
