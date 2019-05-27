@@ -7,13 +7,18 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        OneHundred oneHundred = new OneHundred();
+        OneHundredOne oneHundredOne = new OneHundredOne();
 
-        TreeNode p = new TreeNode(1);
-        TreeNode q = new TreeNode(2);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(2);
+        root.left.left = new TreeNode(3);
+        root.left.right = new TreeNode(4);
+        root.right.left = new TreeNode(4);
+        root.right.right = new TreeNode(3);
 
 
-        System.out.println(oneHundred.isSameTree(p, q));
+        System.out.println(oneHundredOne.isSymmetric(root));
     }
 
 }
