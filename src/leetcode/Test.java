@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.List;
+
 /**
  * @author gcg
  * @create 2019-04-26 22:27
@@ -7,17 +9,17 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        OneHundredFour oneHundredFour = new OneHundredFour();
+        OneHundredSeven oneHundredSeven = new OneHundredSeven();
 
         TreeNode root = new TreeNode(3);
-        root.left = new TreeNode(9);
-        root.right = new TreeNode(20);
-        root.right.left = new TreeNode(15);
-        root.right.right = new TreeNode(7);
-        root.right.left.left = new TreeNode(15);
+//        root.left = new TreeNode(9);
+//        root.right = new TreeNode(20);
+//        root.right.left = new TreeNode(15);
+//        root.right.right = new TreeNode(7);
 
 
-        System.out.println(oneHundredFour.maxDepth(root));
+        List<List<Integer>> lists = oneHundredSeven.levelOrderBottom(null);
+        System.out.println(lists);
     }
 
 }
