@@ -33,31 +33,20 @@ public class OneHundredSeven {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> sum = new ArrayList<>();
         if (root == null) return sum;
-        Queue<Node> queue = new LinkedList();
-        queue.offer(new Node(0, root));
+        Queue<TreeNode> queue = new LinkedList();
+        queue.offer(root);
         while (!queue.isEmpty()) {
-            Node node = queue.poll();
-            if (sum.size() <= node.level || sum.get(node.level) == null) {
-                sum.add(0, new ArrayList<>());
+            List<Integer> list = new ArrayList<>();
+            int length = queue.size();
+            for (int i = 0; i < length; i++) {
+                TreeNode node = queue.poll();
+                list.add(node.val);
+                if (node.left != null) queue.offer(node.left);
+                if (node.right != null) queue.offer(node.right);
             }
-            sum.get(0).add(node.treeNode.val);
-            if (node.treeNode.left != null) queue.offer(new Node(node.level + 1, node.treeNode.left));
-            if (node.treeNode.right != null) queue.offer(new Node(node.level + 1, node.treeNode.right));
+            sum.add(0, list);
         }
         return sum;
-    }
-
-}
-
-class Node {
-
-    int level;
-
-    TreeNode treeNode;
-
-    public Node(int level, TreeNode treeNode) {
-        this.level = level;
-        this.treeNode = treeNode;
     }
 
 }
