@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.List;
-
 /**
  * @author gcg
  * @create 2019-04-26 22:27
@@ -9,17 +7,12 @@ import java.util.List;
 public class Test {
 
     public static void main(String[] args) {
-        OneHundredSeven oneHundredSeven = new OneHundredSeven();
+        OneHundredEight oneHundredEight = new OneHundredEight();
 
-        TreeNode root = new TreeNode(3);
-        root.left = new TreeNode(9);
-        root.right = new TreeNode(20);
-        root.right.left = new TreeNode(15);
-        root.right.right = new TreeNode(7);
+        int[] nums = {-10, -3, 0, 5, 9};
 
-
-        List<List<Integer>> lists = oneHundredSeven.levelOrderBottom(root);
-        System.out.println(lists);
+        TreeNode treeNode = oneHundredEight.sortedArrayToBST(nums);
+        System.out.println(((1 - 1) >> 1) + 1);
     }
 
 }
