@@ -1,8 +1,5 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * @author gcg
  * @create 2019-04-26 22:27
@@ -10,22 +7,15 @@ import java.util.List;
 public class Test {
 
     public static void main(String[] args) {
-        OneHundredTen oneHundredTen = new OneHundredTen();
+        OneHundredEleven oneHundredEleven = new OneHundredEleven();
 
         TreeNode root = new TreeNode(3);
-        root.left = new TreeNode(9);
-        root.right = new TreeNode(20);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
         root.left.left = new TreeNode(3);
-        root.right.right = new TreeNode(3);
-        root.left.left.left = new TreeNode(15);
-        root.right.right.right = new TreeNode(7);
+        root.left.right = new TreeNode(3);
 
-//        System.out.println(oneHundredTen.isBalanced(root));
-
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        System.out.println(1 + ":" + list.toString());
+        System.out.println(oneHundredEleven.minDepth(root));
     }
 
 }
