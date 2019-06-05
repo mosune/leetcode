@@ -1,8 +1,5 @@
 package leetcode;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  *
  * 给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。
@@ -28,33 +25,8 @@ public class OneHundredTwelve {
 
     public boolean hasPathSum(TreeNode root, int sum) {
         if (root == null) return false;
-        Queue<Node> queue = new LinkedList();
-        queue.offer(new Node(root, root.val));
-        while (!queue.isEmpty()) {
-            Node node = queue.poll();
-            if (node.node.left == null && node.node.right == null) {
-                if (node.sum == sum) return true;
-                else continue;
-            }
-            if (node.node.left != null)
-                queue.add(new Node(node.node.left, node.node.left.val + node.sum));
-            if (node.node.right != null)
-                queue.add(new Node(node.node.right, node.node.right.val + node.sum));
-        }
-        return false;
-    }
-
-}
-
-class Node {
-
-    TreeNode node;
-
-    int sum;
-
-    public Node(TreeNode treeNode, int sum) {
-        this.node = treeNode;
-        this.sum = sum;
+        if (root.left == null && root.right == null && root.val == sum) return true;
+        return hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);
     }
 
 }
