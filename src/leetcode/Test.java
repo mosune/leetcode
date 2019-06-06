@@ -7,9 +7,11 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        OneHundredNineteen oneHundredNinteen = new OneHundredNineteen();
+        OneHundredTwentyOne oneHundredTwentyOne = new OneHundredTwentyOne();
 
-        System.out.println(oneHundredNinteen.getRow(5));
+        int[] prices = {7,2,5,3,6,1,4};
+
+        System.out.println(oneHundredTwentyOne.maxProfit(prices));
     }
 
 }
