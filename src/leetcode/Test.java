@@ -7,11 +7,11 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        OneHundredTwentyOne oneHundredTwentyOne = new OneHundredTwentyOne();
+        OneHundredTwentyTwo oneHundredTwentyTwo = new OneHundredTwentyTwo();
 
-        int[] prices = {7,2,5,3,6,1,4};
+        int[] prices = {7,1,5,3,6,7};
 
-        System.out.println(oneHundredTwentyOne.maxProfit(prices));
+        System.out.println(oneHundredTwentyTwo.maxProfit(prices));
     }
 
 }
