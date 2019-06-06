@@ -7,9 +7,9 @@ package leetcode;
 public class Test {
 
     public static void main(String[] args) {
-        OneHundredEighteen oneHundredEighteen = new OneHundredEighteen();
+        OneHundredNineteen oneHundredNinteen = new OneHundredNineteen();
 
-        System.out.println(oneHundredEighteen.generate(100));
+        System.out.println(oneHundredNinteen.getRow(5));
     }
 
 }
