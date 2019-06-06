@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.easy;
 
 /**
  * 125. 验证回文串

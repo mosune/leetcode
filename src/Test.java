@@ -1,4 +1,4 @@
-import leetcode.OneHundredTwentyFive;
+import leetcode.easy.OneHundredTwentyFive;
 
 /**
  * @author gcg
