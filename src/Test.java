@@ -1,4 +1,4 @@
-import leetcode.easy.OneHundredTwentyFive;
+import leetcode.easy.OneHundredThirtySix;
 
 /**
  * @author gcg
@@ -7,9 +7,11 @@ import leetcode.easy.OneHundredTwentyFive;
 public class Test {
 
     public static void main(String[] args) {
-        OneHundredTwentyFive oneHundredTwentyFive = new OneHundredTwentyFive();
+        OneHundredThirtySix oneHundredThirtySix = new OneHundredThirtySix();
 
-        System.out.println(oneHundredTwentyFive.isPalindrome("0P"));
+        int[] nums = {4};
+
+        System.out.println(oneHundredThirtySix.singleNumber(nums));
     }
 
 }
