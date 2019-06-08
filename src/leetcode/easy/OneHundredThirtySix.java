@@ -1,7 +1,5 @@
 package leetcode.easy;
 
-import java.util.Arrays;
-
 /**
  * 136. 只出现一次的数字
  *
@@ -25,23 +23,21 @@ import java.util.Arrays;
  **/
 public class OneHundredThirtySix {
 
-    public int singleNumber(int[] nums) {
-        Arrays.sort(nums);
-        for (int i = 0; i < nums.length; i += 2) {
-            if (i + 1 == nums.length || nums[i] != nums[i + 1]) return nums[i];
-        }
-        return 0;
-    }
+//    public int singleNumber(int[] nums) {
+//        Arrays.sort(nums);
+//        for (int i = 0; i < nums.length; i += 2) {
+//            if (i + 1 == nums.length || nums[i] != nums[i + 1]) return nums[i];
+//        }
+//        return 0;
+//    }
 
-//    private int[] sort(int[] nums) {
-//        return sortArrays(0, nums.length, nums);
-//    }
-//
-//    private int[] sortArrays(int start, int end, int[] nums) {
-//        int middle = (end - start) / 2;
-//        sortArrays(start, middle, nums);
-//        sortArrays(middle + 1, end, nums);
-//        return nums;
-//    }
+    public int singleNumber(int[] nums) {
+        // 异或解决
+        int result = 0;
+        for (int i = 0; i < nums.length; i++) {
+            result ^= nums[i];
+        }
+        return result;
+    }
 
 }
