@@ -61,11 +61,4 @@ public class OneHundredSixtyEight {
         return sb.reverse().toString();
     }
 
-    public static void main(String[] args) {
-        OneHundredSixtyEight oneHundredSixtyEight = new OneHundredSixtyEight();
-
-        System.out.println(28 % 26);
-        System.out.println(oneHundredSixtyEight.convertToTitle(702));
-    }
-
 }
