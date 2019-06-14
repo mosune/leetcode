@@ -35,14 +35,15 @@ package leetcode.easy;
  **/
 public class OneHundredNinety {
 
-    // todo:待做，目前还不懂意思
     public int reverseBits(int n) {
-        int a = 1111111111;
-        for (int i = 0; i < 31; i++) {
+        int result = 0;
+        for (int i = 0; i < 32; i++) {
+            // 取出每一位的值
             int b = n >> i & 1;
-            a ^= (a & (1 << (31 - i))) ^ (b << a);
+            // 通过向左移并且或的形式赋值
+            result = result | (b << (31 - i));
         }
-        return a;
+        return result;
     }
 
 }
