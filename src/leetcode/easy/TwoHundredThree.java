@@ -15,7 +15,7 @@ package leetcode.easy;
  **/
 public class TwoHundredThree {
 
-    // 双指针法
+    // 双指针法，刚开始的循环可以使用哨兵节点解决
 //    public ListNode removeElements(ListNode head, int val) {
 //        if (head == null) return null;
 //        while (head.val == val) {
