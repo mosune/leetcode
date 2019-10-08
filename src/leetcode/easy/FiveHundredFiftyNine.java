@@ -23,20 +23,35 @@ import java.util.List;
  **/
 public class FiveHundredFiftyNine {
 
-    private int max;
+    /**
+     * 复杂写法
+     */
+//    private int max;
+//
+//    public int maxDepth(Node root) {
+//        getMax(root, 0);
+//        return max;
+//    }
+//
+//    private void getMax(Node node, int depth) {
+//        if (node == null) return;
+//        List<Node> childs = node.children;
+//        for (Node n : childs) {
+//            getMax(n, depth + 1);
+//        }
+//        max = Math.max(depth + 1, max);
+//    }
 
+    /**
+     * 简单写法
+     * @param root
+     * @return
+     */
     public int maxDepth(Node root) {
-        getMax(root, 0);
-        return max;
-    }
-
-    private void getMax(Node node, int depth) {
-        if (node == null) return;
-        List<Node> childs = node.children;
-        for (Node n : childs) {
-            getMax(n, depth + 1);
-        }
-        max = Math.max(depth + 1, max);
+        if (root == null) return 0;
+        int d = 0;
+        for (Node node : root.children) d = Math.max(maxDepth(node), d);
+        return d + 1;
     }
 
 }
