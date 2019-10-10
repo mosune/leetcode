@@ -1,4 +1,4 @@
-package leetcode.easy;
+package leetcode.middle;
 
 /**
  * 400. 第N个数字

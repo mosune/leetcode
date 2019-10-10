@@ -1,5 +1,7 @@
 package leetcode.easy;
 
+import leetcode.commom.TreeNode;
+
 /**
  * 235. 二叉搜索树的最近公共祖先
  *

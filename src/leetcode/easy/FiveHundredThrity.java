@@ -1,5 +1,7 @@
 package leetcode.easy;
 
+import leetcode.commom.TreeNode;
+
 /**
  * 530. 二叉搜索树的最小绝对差
  *

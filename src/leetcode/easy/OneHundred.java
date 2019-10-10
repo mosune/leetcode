@@ -1,5 +1,7 @@
 package leetcode.easy;
 
+import leetcode.commom.TreeNode;
+
 /**
  *
  * 给定两个二叉树，编写一个函数来检验它们是否相同。
@@ -55,11 +57,4 @@ public class OneHundred {
         return true;
     }
 
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
 }

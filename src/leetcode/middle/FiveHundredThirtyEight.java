@@ -1,4 +1,6 @@
-package leetcode.easy;
+package leetcode.middle;
+
+import leetcode.commom.TreeNode;
 
 import java.util.Stack;
 

@@ -1,5 +1,7 @@
 package leetcode.easy;
 
+import leetcode.commom.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
