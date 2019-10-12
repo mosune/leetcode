@@ -22,23 +22,12 @@ package leetcode.easy;
  **/
 public class ThreeHundredThree {
 
-    public static void main(String[] args) {
-        NumArray numArray = new NumArray(new int[]{-2, 0, 3, -5, 2, -1});
-        numArray.sumRange(0, 2);
-        numArray.sumRange(2, 5);
-        numArray.sumRange(0, 5);
-    }
-
-}
-
-class NumArray {
-
     /**
      * 用数组缓存结果
      */
     private int[] results;
 
-    public NumArray(int[] nums) {
+    public ThreeHundredThree(int[] nums) {
         results = new int[nums.length + 1];
         for (int i = 1; i < results.length; i++) {
             results[i] = nums[i - 1] + results[i - 1];
@@ -48,4 +37,5 @@ class NumArray {
     public int sumRange(int i, int j) {
         return results[j + 1] - results[i];
     }
+
 }

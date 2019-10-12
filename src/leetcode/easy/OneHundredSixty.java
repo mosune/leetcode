@@ -1,5 +1,7 @@
 package leetcode.easy;
 
+import leetcode.commom.ListNode;
+
 /**
  * 160. 相交链表
  *

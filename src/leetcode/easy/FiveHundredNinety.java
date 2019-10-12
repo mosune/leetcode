@@ -1,5 +1,7 @@
 package leetcode.easy;
 
+import leetcode.commom.Node;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;

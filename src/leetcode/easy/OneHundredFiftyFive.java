@@ -25,21 +25,6 @@ package leetcode.easy;
  **/
 public class OneHundredFiftyFive {
 
-    public static void main(String[] args) {
-        MinStack minStack = new MinStack();
-        minStack.push(-2);
-        minStack.push(0);
-        minStack.push(-3);
-        System.out.println(minStack.getMin());
-        minStack.pop();
-        System.out.println(minStack.top());
-        System.out.println(minStack.getMin());
-    }
-
-}
-
-class MinStack {
-
     /**
      * 头节点
      */
@@ -50,7 +35,7 @@ class MinStack {
      */
     private Node minHead;
 
-    public MinStack() {}
+    public OneHundredFiftyFive() {}
 
     public void push(int x) {
         if (minHead == null) minHead = new Node(x);

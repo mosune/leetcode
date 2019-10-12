@@ -23,14 +23,44 @@ import java.util.Queue;
  **/
 public class TwoHundredTwentyFive {
 
-    public static void main(String[] args) {
-        MyStack obj = new MyStack();
-        obj.push(1);
-        System.out.println(obj.pop());
-        System.out.println(obj.empty());
-        obj.push(2);
-        System.out.println(obj.top());
-        System.out.println(obj.empty());
+    Queue<Integer> queue;
+
+    int top;
+
+    /** Initialize your data structure here. */
+    public TwoHundredTwentyFive() {
+        queue = new LinkedList<>();
+    }
+
+    /** Push element x onto stack. */
+    public void push(int x) {
+        queue.offer(x);
+        top = x;
+    }
+
+    /** Removes the element on top of the stack and returns that element. */
+    public int pop() {
+        int size = queue.size();
+
+        for (int i = 1; i < size; i++) {
+            int n = queue.poll();
+            queue.offer(n);
+            if (i == size - 1) {
+                top = n;
+            }
+        }
+
+        return queue.poll();
+    }
+
+    /** Get the top element. */
+    public int top() {
+        return top;
+    }
+
+    /** Returns whether the stack is empty. */
+    public boolean empty() {
+        return queue.isEmpty();
     }
 
 }
@@ -38,7 +68,7 @@ public class TwoHundredTwentyFive {
 /**
  * 俩个队列实现
  */
-//class MyStack {
+//class TwoHundredTwentyFive {
 //
 //    Queue<Integer> index;
 //
@@ -47,7 +77,7 @@ public class TwoHundredTwentyFive {
 //    int top;
 //
 //    /** Initialize your data structure here. */
-//    public MyStack() {
+//    public TwoHundredTwentyFive() {
 //        index = new LinkedList();
 //        count = 0;
 //    }
@@ -85,49 +115,3 @@ public class TwoHundredTwentyFive {
 //        return count == 0;
 //    }
 //}
-
-/**
- * 一个队列实现
- */
-class MyStack {
-
-    Queue<Integer> queue;
-
-    int top;
-
-    /** Initialize your data structure here. */
-    public MyStack() {
-        queue = new LinkedList<>();
-    }
-
-    /** Push element x onto stack. */
-    public void push(int x) {
-        queue.offer(x);
-        top = x;
-    }
-
-    /** Removes the element on top of the stack and returns that element. */
-    public int pop() {
-        int size = queue.size();
-
-        for (int i = 1; i < size; i++) {
-            int n = queue.poll();
-            queue.offer(n);
-            if (i == size - 1) {
-                top = n;
-            }
-        }
-
-        return queue.poll();
-    }
-
-    /** Get the top element. */
-    public int top() {
-        return top;
-    }
-
-    /** Returns whether the stack is empty. */
-    public boolean empty() {
-        return queue.isEmpty();
-    }
-}

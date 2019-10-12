@@ -1,5 +1,7 @@
 package leetcode.easy;
 
+import leetcode.commom.ListNode;
+
 /**
  * 203. 移除链表元素
  *

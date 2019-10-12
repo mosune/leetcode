@@ -31,19 +31,43 @@ import java.util.Stack;
  **/
 public class TwoHundredThirtyTwo {
 
-    public static void main(String[] args) {
-        MyQueue obj = new MyQueue();
-        obj.push(1);
-        obj.push(2);
-        obj.push(3);
-        System.out.println(obj.peek());
-        System.out.println(obj.pop());
-        System.out.println(obj.peek());
-        System.out.println(obj.pop());
-        System.out.println(obj.peek());
-        System.out.println(obj.empty());
-        System.out.println(obj.pop());
-        System.out.println(obj.empty());
+    private Stack<Integer> push;
+
+    private Stack<Integer> take;
+
+    int top;
+
+    /** Initialize your data structure here. */
+    public TwoHundredThirtyTwo() {
+        push = new Stack<>();
+        take = new Stack<>();
+    }
+
+    /** Push element x to the back of queue. */
+    public void push(int x) {
+        push.push(x);
+        if (push.size() == 1) top = x;
+    }
+
+    /** Removes the element from in front of queue and returns that element. */
+    public int pop() {
+        if (take.empty()) {
+            int size = push.size();
+            for (int i = 0; i < size - 1; i++) take.push(push.pop());
+            return push.pop();
+        }
+        return take.pop();
+    }
+
+    /** Get the front element. */
+    public int peek() {
+        if (take.size() != 0) return take.peek();
+        return top;
+    }
+
+    /** Returns whether the queue is empty. */
+    public boolean empty() {
+        return push.empty() && take.empty();
     }
 
 
@@ -52,14 +76,14 @@ public class TwoHundredThirtyTwo {
 /**
  * 一个队列，同出同进
  */
-//class MyQueue {
+//class TwoHundredThirtyTwo {
 //
 //    private Stack<Integer> stack;
 //
 //    int top;
 //
 //    /** Initialize your data structure here. */
-//    public MyQueue() {
+//    public TwoHundredThirtyTwo() {
 //        stack = new Stack<>();
 //    }
 //
@@ -97,45 +121,3 @@ public class TwoHundredThirtyTwo {
 //        return stack.empty();
 //    }
 //}
-
-class MyQueue {
-
-    private Stack<Integer> push;
-
-    private Stack<Integer> take;
-
-    int top;
-
-    /** Initialize your data structure here. */
-    public MyQueue() {
-        push = new Stack<>();
-        take = new Stack<>();
-    }
-
-    /** Push element x to the back of queue. */
-    public void push(int x) {
-        push.push(x);
-        if (push.size() == 1) top = x;
-    }
-
-    /** Removes the element from in front of queue and returns that element. */
-    public int pop() {
-        if (take.empty()) {
-            int size = push.size();
-            for (int i = 0; i < size - 1; i++) take.push(push.pop());
-            return push.pop();
-        }
-        return take.pop();
-    }
-
-    /** Get the front element. */
-    public int peek() {
-        if (take.size() != 0) return take.peek();
-        return top;
-    }
-
-    /** Returns whether the queue is empty. */
-    public boolean empty() {
-        return push.empty() && take.empty();
-    }
-}

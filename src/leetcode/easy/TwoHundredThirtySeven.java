@@ -1,5 +1,7 @@
 package leetcode.easy;
 
+import leetcode.commom.ListNode;
+
 /**
  * 237. 删除链表中的节点
  *

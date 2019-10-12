@@ -1,5 +1,7 @@
 package leetcode.easy;
 
+import leetcode.commom.ListNode;
+
 /**
  * 206. 反转链表
  *
