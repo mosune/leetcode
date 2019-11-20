@@ -1,12 +1,11 @@
 package leetcode.easy;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Stack;
 
 /**
  * 720. 词典中最长的单词
@@ -40,6 +39,11 @@ import java.util.Set;
  **/
 public class SevenHundredTwenty {
 
+    /**
+     * 利用hash表
+     * @param words
+     * @return
+     */
 //    public String longestWord(String[] words) {
 //        Arrays.sort(words);
 //        Set<String> strings = new HashSet<>(words.length);
@@ -69,22 +73,18 @@ public class SevenHundredTwenty {
 //        return string;
 //    }
 
-    public static String longestWord(String[] words) {
-        Arrays.sort(words);
-        TrieNode trieNode = new TrieNode('0');
-
-        for (String string : words) {
-            char[] chars = string.toCharArray();
-
-        }
-
-
-        return null;
+    /**
+     * 利用前缀树
+     * @param words
+     * @return
+     */
+    public String longestWord(String[] words) {
+        Trie trie = new Trie();
+        for (int i = 1; i <= words.length; i++) trie.insert(words[i - 1], i);
+        return trie.dfs(words);
     }
 
 }
-
-// todo 完善前缀树
 
 class TrieNode {
 
@@ -92,6 +92,9 @@ class TrieNode {
 
     Map<Character, TrieNode> childrens;
 
+    /**
+     * 存数组下标，这样可以知道是否有前缀
+     */
     int num;
 
     TrieNode(char c) {
@@ -105,22 +108,49 @@ class Trie {
 
     TrieNode trieNode;
 
-    Trie(char c) {
+    Trie() {
         trieNode = new TrieNode('0');
     }
 
-    void insert(String str) {
-        TrieNode node = trieNode;
-        TrieNode newNode;
+    void insert(String str, int num) {
+        TrieNode cur = trieNode;
         char[] chars = str.toCharArray();
         for (char c : chars) {
-            newNode = node.childrens.get(c);
-            if (newNode == null) {
-                newNode = new TrieNode(c);
-                node.childrens.put(c, newNode);
-            }
-            node = newNode;
+            cur.childrens.putIfAbsent(c, new TrieNode(c));
+            cur = cur.childrens.get(c);
         }
+        cur.num = num;
     }
 
+    String dfs(String[] words) {
+        String maxStr = "";
+        Stack<TrieNode> stack = new Stack<>();
+        stack.push(trieNode);
+
+        while (!stack.isEmpty()) {
+            TrieNode node = stack.pop();
+            if (node.num > 0 || node == trieNode) {
+                if (trieNode != node) {
+                    // 直接通过字符串进行比较
+                    String str = words[node.num - 1];
+                    if (str.length() >= maxStr.length()) {
+                        if (str.length() > maxStr.length()) maxStr = str;
+                        else {
+                            for (int i = 0; i < str.length(); i++) {
+                                if (str.charAt(i) > maxStr.charAt(i)) break;
+                                if (str.charAt(i) < maxStr.charAt(i)) {
+                                    maxStr = str;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+                for (TrieNode n : node.childrens.values()) {
+                    stack.push(n);
+                }
+            }
+        }
+        return maxStr;
+    }
 }
