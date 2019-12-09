@@ -1,4 +1,4 @@
-package leetcode.easy;
+package leetcode.middle;
 
 /**
  * 754. 到达终点数字
