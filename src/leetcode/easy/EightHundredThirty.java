@@ -33,7 +33,7 @@ import java.util.List;
  * @author gcg
  * @create 2019-12-18 11:30
  **/
-public class EightHundredThrity {
+public class EightHundredThirty {
 
     public List<List<Integer>> largeGroupPositions(String S) {
         List<List<Integer>> result = new ArrayList<>();
