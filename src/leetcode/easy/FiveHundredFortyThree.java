@@ -24,7 +24,7 @@ import leetcode.commom.TreeNode;
  **/
 public class FiveHundredFortyThree {
 
-    private static int max;
+    private int max;
 
     /**
      * 复杂做法

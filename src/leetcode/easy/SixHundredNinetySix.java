@@ -34,7 +34,7 @@ import java.util.List;
  **/
 public class SixHundredNinetySix {
 
-//    public static int countBinarySubstrings(String s) {
+//    public int countBinarySubstrings(String s) {
 //        char[] chars = s.toCharArray();
 //        int preSize, index = 0, num = chars[0], sum = 0;
 //        while (index < chars.length && chars[index] == num) {
@@ -62,7 +62,7 @@ public class SixHundredNinetySix {
 //        return sum + Math.min(preSize, s.length() - now);
 //    }
 
-    public static int countBinarySubstrings(String s) {
+    public int countBinarySubstrings(String s) {
         char[] chars = s.toCharArray();
         List<Integer> results = new ArrayList<>(chars.length);
 

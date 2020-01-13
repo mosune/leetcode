@@ -48,7 +48,7 @@ import java.util.Map;
  **/
 public class EightHundredSeventyFour {
 
-    public static int robotSim(int[] commands, int[][] obstacles) {
+    public int robotSim(int[] commands, int[][] obstacles) {
         // 又臭又长，官方的比较好
         Map<Integer, List<Integer>> xMap = new HashMap<>(obstacles.length, 1);
         Map<Integer, List<Integer>> yMap = new HashMap<>(obstacles.length, 1);
