@@ -46,7 +46,7 @@ import java.util.Queue;
  **/
 public class NineHundredNinetyFour {
 
-    public static int orangesRotting(int[][] grid) {
+    public int orangesRotting(int[][] grid) {
         Queue<Integer> xs = new LinkedList<>();
         Queue<Integer> ys = new LinkedList<>();
         int sum = 0, min = 0;
