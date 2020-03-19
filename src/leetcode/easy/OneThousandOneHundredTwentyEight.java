@@ -31,7 +31,7 @@ import java.util.Map;
  * @author gcg
  * @create 2020-03-19 14:36
  **/
-public class OneHundredTwentyEight {
+public class OneThousandOneHundredTwentyEight {
 
     public int numEquivDominoPairs(int[][] dominoes) {
         int sum = 0, key;
