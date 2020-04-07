@@ -1,7 +1,5 @@
 package leetcode.easy;
 
-import java.util.Arrays;
-
 /**
  * 1370. 上升下降字符串
  *
