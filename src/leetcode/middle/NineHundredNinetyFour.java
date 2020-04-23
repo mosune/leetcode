@@ -1,4 +1,4 @@
-package leetcode.easy;
+package leetcode.middle;
 
 import java.util.LinkedList;
 import java.util.Queue;
