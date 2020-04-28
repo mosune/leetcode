@@ -42,7 +42,7 @@ public class FiveHundredOne {
      * @param root
      * @return
      */
-//    public static int[] findMode(TreeNode root) {
+//    public int[] findMode(TreeNode root) {
 //        Map<Integer, Integer> map = new HashMap<>();
 //        List<Integer> list = new ArrayList<>();
 //        int[] array;
@@ -61,7 +61,7 @@ public class FiveHundredOne {
 //        return array;
 //    }
 //
-//    private static int findNum(TreeNode node, Map<Integer, Integer> map, int max) {
+//    private int findNum(TreeNode node, Map<Integer, Integer> map, int max) {
 //        if (node == null) return max;
 //        Integer num = map.get(node.val) == null ? 1 : map.get(node.val) + 1;
 //        map.put(node.val, num);
