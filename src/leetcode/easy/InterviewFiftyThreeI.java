@@ -30,6 +30,12 @@ package leetcode.easy;
  **/
 public class InterviewFiftyThreeI {
 
+    /**
+     * 有更牛逼的解法
+     * @param nums
+     * @param target
+     * @return
+     */
     public int search(int[] nums, int target) {
         int left = getIndex(nums, target, 0, nums.length - 1, true);
         int right = getIndex(nums, target, 0, nums.length - 1, false);
